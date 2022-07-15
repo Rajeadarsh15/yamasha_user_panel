@@ -357,6 +357,10 @@ function stepOneFun() {
         bootstrapAlert(stepOneErrDiv, "Enter valid 10 Digit Number", "danger", 3);
         return false;
     }
+    if (CITY.value.length < 3) {
+        bootstrapAlert(stepOneErrDiv, "Enter valid City", "danger", 3);
+        return false;
+    }
     // calling api
     var bodyFormData = new URLSearchParams();
     bodyFormData.append("MOB_NUMBER", MOB_NUMBER.value);

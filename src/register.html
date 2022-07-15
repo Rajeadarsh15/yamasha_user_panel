@@ -394,6 +394,12 @@
                 return false;
             }
 
+            if (CITY.value.length < 3) {
+
+                bootstrapAlert(stepOneErrDiv, "Enter valid City", 'danger', 3)
+                return false;
+            }
+
             // calling api
             var bodyFormData = new URLSearchParams();
 
